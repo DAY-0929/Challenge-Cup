@@ -456,7 +456,7 @@
 <!-- 可关闭滚动横幅 -->
 <div class="top-banner" id="banner">
   <button class="banner-close" onclick="closeBanner()">×</button>
-  <div class="banner-text">🎉 全部课程限时特惠 · 零基础入门AI · 实战教学 · 学完即可就业 · 全程助教辅导</div>
+  <div class="banner-text">🎉 全部课程限时特惠 · 零基础入门AI · 支教团队 · 经典范例 · 实操反馈</div>
 </div>
 
 <!-- 导航 -->
@@ -566,7 +566,7 @@
 <div class="modal-mask" id="profileModal">
   <div class="modal-box">
     <h3 class="modal-title">个人中心</h3>
-    <img id="profileAvatar" src="https://picsum.photos/200/200" style="width:80px; height:80px; border-radius:50%; margin:0 auto 16px; display:block;">
+    <img id="profileAvatar" src="assets/images/院徽（金）.png" style="width:80px; height:80px; border-radius:50%; margin:0 auto 16px; display:block;">
     <input type="file" accept="image/*" onchange="changeAvatar()">
     <input class="modal-input" placeholder="昵称" id="nick">
     <button class="modal-btn" onclick="saveProfile()">保存</button>
@@ -602,26 +602,26 @@ function prevSlide(){
 }
 
 const courses = [
-  {id:1,title:"Python数据分析实战",type:"data",tag:"数据读心术"},
-  {id:2,title:"AI数据可视化精通",type:"data",tag:"数据读心术"},
-  {id:3,title:"数据挖掘预测模型",type:"data",tag:"数据读心术"},
-  {id:4,title:"智能助手开发实战",type:"inter",tag:"人机共舞术"},
-  {id:5,title:"对话系统设计",type:"inter",tag:"人机共舞术"},
-  {id:6,title:"提示词工程大师课",type:"inter",tag:"人机共舞术"},
-  {id:7,title:"AI伦理与安全",type:"ethic",tag:"伦理守护盾"},
-  {id:8,title:"AIGC全栈应用",type:"cross",tag:"跨界编织者"},
-  {id:9,title:"多模态大模型实战",type:"cross",tag:"跨界编织者"},
-  {id:10,title:"AI商业落地项目",type:"cross",tag:"跨界编织者"},
-  {id:11,title:"数据安全与合规",type:"ethic",tag:"伦理守护盾"},
-  {id:12,title:"AI风控系统",type:"ethic",tag:"伦理守护盾"},
-  {id:13,title:"智能推荐算法",type:"data",tag:"数据读心术"},
-  {id:14,title:"大数据分析框架",type:"data",tag:"数据读心术"},
-  {id:15,title:"前端AI组件开发",type:"inter",tag:"人机共舞术"},
-  {id:16,title:"语音交互系统",type:"inter",tag:"人机共舞术"},
-  {id:17,title:"AI绘画进阶",type:"cross",tag:"跨界编织者"},
-  {id:18,title:"AI视频生成",type:"cross",tag:"跨界编织者"},
-  {id:19,title:"数据分析可视化",type:"data",tag:"数据读心术"},
-  {id:20,title:"AI全栈项目实战",type:"cross",tag:"跨界编织者"}
+  {id:1,title:"人工智能数据识别原理入门",type:"data",tag:"数据读心术",img:"assets/course/1.jpg"},
+  {id:2,title:"生活数据采集与AI认知启蒙",type:"data",tag:"数据读心术",img:"assets/course/2.jpg"},
+  {id:3,title:"数字信息解码与逻辑基础讲解",type:"data",tag:"数据读心术",img:"assets/course/3.jpg"},
+  {id:4,title:"智能助手开发实战",type:"inter",tag:"人机共舞术",img:"assets/course/4.jpg"},
+  {id:5,title:"对话系统设计",type:"inter",tag:"人机共舞术",img:"assets/course/5.jpg"},
+  {id:6,title:"提示词工程大师课",type:"inter",tag:"人机共舞术",img:"assets/course/6.jpg"},
+  {id:7,title:"AI伦理与安全",type:"ethic",tag:"伦理守护盾",img:"assets/course/7.jpg"},
+  {id:8,title:"AIGC全栈应用",type:"cross",tag:"跨界编织者",img:"assets/course/8.jpg"},
+  {id:9,title:"多模态大模型实战",type:"cross",tag:"跨界编织者",img:"assets/course/9.jpg"},
+  {id:10,title:"AI商业落地项目",type:"cross",tag:"跨界编织者",img:"assets/course/10.jpg"},
+  {id:11,title:"数据安全与合规",type:"ethic",tag:"伦理守护盾",img:"assets/course/11.jpg"},
+  {id:12,title:"AI风控系统",type:"ethic",tag:"伦理守护盾",img:"assets/course/12.jpg"},
+  {id:13,title:" 图像语音数据智能分析科普",type:"data",tag:"数据读心术",img:"assets/course/13.jpg"},
+  {id:14,title:"大数据时代AI基础思维培养",type:"data",tag:"数据读心术",img:"assets/course/14.jpg"},
+  {id:15,title:"前端AI组件开发",type:"inter",tag:"人机共舞术",img:"assets/course/15.jpg"},
+  {id:16,title:"语音交互系统",type:"inter",tag:"人机共舞术",img:"assets/course/16.jpg"},
+  {id:17,title:"AI绘画进阶",type:"cross",tag:"跨界编织者",img:"assets/course/17.jpg"},
+  {id:18,title:"AI视频生成",type:"cross",tag:"跨界编织者",img:"assets/course/18.jpg"},
+  {id:19,title:"乡村支教趣味AI数据通识课",type:"data",tag:"数据读心术",img:"assets/course/19.jpg"},
+  {id:20,title:"AI全栈项目实战",type:"cross",tag:"跨界编织者",img:"assets/course/20.jpg"}
 ];
 
 let currentFilter="all";let keyword="";
@@ -632,15 +632,15 @@ function renderCourse(){
     const keyOk=item.title.includes(keyword);
     return tagOk&&keyOk;
   });
-  grid.innerHTML=list.map(item=>`
-    <div class="course-card">
-      <img class="course-cover" src="https://picsum.photos/seed/${item.id}/400/220">
-      <div class="course-info">
-        <div class="course-title">${item.title}</div>
-        <span class="course-tag">${item.tag}</span>
-      </div>
+  grid.innerHTML=list.map((item, index)=>`
+  <div class="course-card" ${index == 0 ? 'onclick="location.href=\'index .html\'" style="cursor:pointer;"' : ''}>
+    <img class="course-cover" src="${item.img}">
+    <div class="course-info">
+      <div class="course-title">${item.title}</div>
+      <span class="course-tag">${item.tag}</span>
     </div>
-  `).join('');
+  </div>
+`).join('');
 }
 function setFilter(type){currentFilter=type;document.querySelectorAll('.filter-item').forEach(e=>e.classList.remove('active'));event.target.classList.add('active');renderCourse();}
 function filterCourses(){keyword=document.querySelector('.search-input').value;renderCourse();}
